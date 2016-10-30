@@ -1,0 +1,215 @@
+﻿<Window x:Class="SudokuSolver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudokuSolver"
+        mc:Ignorable="d"
+        Title="Sudoku Solver 1.0" Height="350" Width="350.523">
+    <DockPanel>
+    <Grid DockPanel.Dock="Top" Height="279">
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+                
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][0], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  ></TextBox>
+                <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][1], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][2], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][0], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][1], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][2], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][0], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][1], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][2], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][3]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][4]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][5]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][3]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][4]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][5]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][3]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][4]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][5]}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][6]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][7]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[0][8]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][6]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][7]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[1][8]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][6]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][7]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[2][8]}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][0]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][1]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][2]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][0]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][1]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][2]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][0]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][1]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][2]}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][3]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][4]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][5]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][3]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][4]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][5]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][3]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][4]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][5]}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][6]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][7]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[3][8]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][6]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][7]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[4][8]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][6]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][7]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[5][8]}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][0]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][1]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][2]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][0]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][1]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][2]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][0]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][1]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][2]}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][3]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][4]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][5]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][3]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][4]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][5]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][3]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][4]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][5]}" ></TextBox>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][6]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][7]}" ></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[6][8]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][6]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][7]}" ></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[7][8]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][6]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][7]}" ></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Text="{Binding Path=sudoku[8][8]}" ></TextBox>
+            </Grid>
+        </Grid>
+    <Button Name="button" DockPanel.Dock="Bottom" Click="button_Click">Solve!</Button>
+    </DockPanel>
+
+</Window>

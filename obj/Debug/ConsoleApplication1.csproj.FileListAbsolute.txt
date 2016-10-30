@@ -1,6 +1,0 @@
-D:\Projekty\Sudku\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
-D:\Projekty\Sudku\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
-D:\Projekty\Sudku\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
-D:\Projekty\Sudku\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
-D:\Projekty\Sudku\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
-D:\Projekty\Sudku\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

@@ -1,0 +1,14 @@
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\bin\Debug\SudokuSolver.exe.config
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\bin\Debug\SudokuSolver.exe
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\bin\Debug\SudokuSolver.pdb
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.csprojResolveAssemblyReference.cache
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\MainWindow.g.cs
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\App.g.cs
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver_MarkupCompile.cache
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver_MarkupCompile.lref
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\MainWindow.baml
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.g.resources
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.Properties.Resources.resources
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.csproj.GenerateResource.Cache
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.exe
+D:\Projekty\Sudku\WPFTestSudoku\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.pdb
